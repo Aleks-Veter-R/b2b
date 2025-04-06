@@ -1,17 +1,39 @@
+import { FunctionComponent } from 'react';
 import { NavLink } from 'react-router';
+import Icon, { TIcon } from '../icon';
 import './styles.scss';
 
-const MainNavigation = () => {
+const componentStyleName = 'component-app-navigation';
+
+const MainNavigation: FunctionComponent = () => {
     return (
-        <div className='app-navigation'>
-            <NavLink to='/'>
-                Home
-            </NavLink>
-            <NavLink to='/first-page'>
-                First
-            </NavLink>
+        <div className={`${componentStyleName}`}>
+            <div className={`${componentStyleName}-wrapper`}>
+                <div className={`${componentStyleName}-logo`}>
+                    <Icon type={TIcon.Logo} />
+                </div>
+                <div className={`${componentStyleName}-link-list`}>
+                    <NavLink to='/'>
+                        Главная
+                    </NavLink>
+                    <NavLink to='/first-page'>
+                        Товары
+                    </NavLink>
+                    <NavLink to='/first-page'>
+                        Компания
+                    </NavLink>
+                </div>
+                <div className={`${componentStyleName}-profile`}>
+                    <NavLink to='/first-page'>
+                        Магнитогорский металлургический комбинат
+                    </NavLink>
+                    <NavLink to='/first-page'>
+                        Выход
+                    </NavLink>
+                </div>
+            </div>
         </div>
     );
-}
+};
 
 export default MainNavigation;

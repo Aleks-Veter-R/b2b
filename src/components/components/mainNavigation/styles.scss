@@ -1,22 +1,67 @@
 @use '../../../styles/DefaultVars.scss' as defaultVars;
 
-.app-navigation {
-    padding: 17px 13px;
-    background-color: defaultVars.$coralThemFirstColor;
+.component-app-navigation {
+    height: 82px;
+    width: 100%;
+    background-color: defaultVars.$originalThemeFirstColor;
 
-    & > a {
-        display: inline-block;
-        height: 21px;
-        margin: 0 12px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 12px;
-        line-height: 21px;
-        font-weight: bold;
-        color: defaultVars.$coralThemSecondColor;
+    .component-app-navigation-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        width: 1416px;
+        height: 100%;
+        margin: 0 auto;
+        padding-top: 16px;
+        box-sizing: border-box;
+        overflow: hidden;
 
-        &:hover {
-            opacity: 0.5;
+        .component-app-navigation-logo {
+            width: 212px;
+            height: 40px;
+            margin-right: 61px;
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        a:hover { opacity: 0.7; }
+
+        .component-app-navigation-link-list {
+            width: 337px;
+            margin-right: 106px;
+            padding-top: 10px;
+
+            a {
+                color: defaultVars.$originalThemeThirdColor;
+                margin-left: 30px;
+            }
+
+            a:nth-child(1) {
+                margin-left: 0;
+                text-transform: none;
+            }
+        }
+
+        .component-app-navigation-profile {
+            width: 614px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            a { color: defaultVars.$originalThemeFourthColor; }
+
+            a:nth-child(1) {
+                max-width: 523px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            a:nth-child(2) { text-transform: none; }
         }
     }
 }

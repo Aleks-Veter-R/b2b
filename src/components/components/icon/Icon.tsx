@@ -1,12 +1,20 @@
 import { FunctionComponent, ReactElement } from 'react';
-import { IProps } from './interfaces';
+import { IPropsIcon } from './interfaces';
+import Arrow from '../icon/images/Arrow';
+import ControlPanel from '../icon/images/ControlPanel';
 import Logo from '../icon/images/Logo';
 import './styles/index.scss';
 
-const Icon: FunctionComponent<IProps> = (props) => {
+const Icon: FunctionComponent<IPropsIcon> = (props) => {
     let icon: ReactElement = null;
     
     switch (props.type) {
+        case 'Arrow':
+            icon = <Arrow />;
+            break;
+        case 'ControlPanel':
+            icon = <ControlPanel />;
+            break;
         case 'Logo':
             icon = <Logo />;
             break;
@@ -16,7 +24,7 @@ const Icon: FunctionComponent<IProps> = (props) => {
     };
 
     return (
-        <div className={`component-icon-svg-${props.type.toLowerCase()}`}>
+        <div className={`component-icon-svg-${props.type}`}>
             {icon}
         </div>
     );

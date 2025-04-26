@@ -1,6 +1,6 @@
 @use '../../../../styles/DefaultVars.scss' as defaultVars;
 
-.component-icon-svg-logo {
+.component-icon-svg-Logo {
     width: 100%;
     height: 100%;
 
@@ -11,5 +11,29 @@
         path {
             fill: defaultVars.$originalThemeSecondColor;
         }
+    }
+}
+
+.component-icon-svg-ControlPanel {
+    width: 24px;
+    height: 24px;
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        path {
+            fill: defaultVars.$originalThemeSecondColor;
+        }
+    }
+}
+
+.component-icon-svg-Arrow {
+    width: 24px;
+    height: 24px;
+
+    svg {
+        width: 100%;
+        height: 100%;
     }
 }

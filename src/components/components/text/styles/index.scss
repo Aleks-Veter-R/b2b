@@ -1,0 +1,9 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.component-text-Medium {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    color: defaultVars.$originalThemeThirdColor;
+    text-align: left;
+}

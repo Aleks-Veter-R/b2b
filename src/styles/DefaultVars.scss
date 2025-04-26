@@ -4,7 +4,7 @@
 
 $coralThemFirstColor: #FF7F50; // Основной акцентный цвет (главное меню)
 $coralThemSecondColor: #ffdead; // Второй акцентный цвет (элементы главного меню)
-$coralThemThirdColor: #fcfcee; // Фоновый цвет (основной цвет фона)
+$coralThemThirdColor: #f5f5f5; // Фоновый цвет (основной цвет фона)
 $coralThemFourthColor: #708090; // Цвет заголовков, текст (полей ввода)
 $coralThemFifthColor: #2F4F4F; // Цвет текста, рамок (инпутов), горизонтальных разделителей
 $coralThemSixthColor: rgba(249, 255, 112, 0.2); // Цвет заливки полей ввода текста
@@ -16,8 +16,10 @@ $coralThemNinthColor: green; // Цвет текста состояния заг�
  * StockExchangeB2B original theme
  */
 
-$originalThemeFirstColor: #0E0F11;  // Основной акцентный цвет (главное меню)
-$originalThemeSecondColor: #EFD90F; // Второй акцентный цвет (фоновый цвет сайта)
-$originalThemeThirdColor: #F5F5F5; // Шрифты главного меню
+$originalThemeFirstColor: #0E0F11;  // Основной акцентный цвет (главное меню, футер сайта)
+$originalThemeSecondColor: #F5F5F5; // Второй акцентный цвет (фоновый цвет сайта, шрифты главного меню)
+$originalThemeThirdColor: #000000; // Третий акцентный цвет (основной цвет шрифтов)
+$originalThemeFourthColor: #EFD90F; // Четвертый акцентный цвет (выделение активных - "текущих" пунктов меню)
 // FIXME Уточнить цвет, сейчас из макета непонятно
-$originalThemeFourthColor: gray; // Шрифты главного меню - "Выход" и "Профиль"
+    $originalThemeFifthColor: gray; // Пятый акцентный цвет (шрифты главного меню - "Выход" и "Профиль")
+$originalThemeSixthColor: #CBCBCB; // Шестой акцентный цвет (цвет границ элемента input)

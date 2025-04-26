@@ -1,6 +1,8 @@
-const enum TIcon {
+const enum EIconType {
+    Arrow = 'Arrow',
+    ControlPanel = 'ControlPanel',
     Logo = 'Logo',
     Default = 'Default',
 };
 
-export { TIcon };
+export { EIconType };

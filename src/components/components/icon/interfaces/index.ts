@@ -1,10 +1,10 @@
-import { TIcon } from './enums';
+import { EIconType } from './enums';
 
-interface IProps {
-    type: TIcon;
+interface IPropsIcon {
+    type: EIconType;
 };
 
 export {
-    TIcon,
-    IProps,
+    EIconType,
+    IPropsIcon,
 };

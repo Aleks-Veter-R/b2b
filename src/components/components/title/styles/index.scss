@@ -1,0 +1,36 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.component-title-HeaderH1 {
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 600;
+    color: defaultVars.$originalThemeThirdColor;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.component-title-HeaderH2 {
+    padding: 10px;
+    background-color: defaultVars.$originalThemeSeventhColor;
+    border-radius: 5px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: defaultVars.$originalThemeThirdColor;
+    text-align: center;
+}
+
+.component-title-HeaderH3 {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 600;
+    color: defaultVars.$originalThemeThirdColor;
+    text-align: center;
+}
+
+.component-title-HeaderH4 {
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: defaultVars.$originalThemeThirdColor;
+}

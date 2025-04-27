@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import { NavLink } from 'react-router';
-import Icon, { TIcon } from '../icon';
+import Icon, { EIconType } from '../icon';
 import './styles.scss';
 
 const componentStyleName = 'component-app-navigation';
@@ -10,7 +10,7 @@ const MainNavigation: FunctionComponent = () => {
         <div className={`${componentStyleName}`}>
             <div className={`${componentStyleName}-wrapper`}>
                 <div className={`${componentStyleName}-logo`}>
-                    <Icon type={TIcon.Logo} />
+                    <Icon type={EIconType.Logo} />
                 </div>
                 <div className={`${componentStyleName}-link-list`}>
                     <NavLink to='/'>

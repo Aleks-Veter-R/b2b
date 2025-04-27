@@ -9,7 +9,7 @@ interface IPropsInput<T> {
     onChange: (value: T) => void;
 }
 
-interface IPropsInputText extends IPropsInput<TInputValue> {
+interface IPropsInputText extends IPropsInput<string> {
     className: string;
     type: EInputType.Text;
     onChange: (value: string) => void;

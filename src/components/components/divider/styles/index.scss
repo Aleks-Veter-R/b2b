@@ -1,0 +1,6 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.component-divider-Default {
+    height: 1px;
+    background-color: defaultVars.$originalThemeThirdColor;
+}

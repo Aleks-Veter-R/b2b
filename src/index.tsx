@@ -15,9 +15,5 @@ const rootElement = document.getElementById('root');
 const rootContainer = createRoot(rootElement);
 
 enableMocking().then(() => {
-    rootContainer.render(
-        <div>
-            <App />
-        </div>,
-    ); 
+    rootContainer.render(<App />); 
 });

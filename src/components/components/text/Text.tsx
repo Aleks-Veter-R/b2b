@@ -6,14 +6,15 @@ const componentStyleName = 'component-text';
 
 const Text: FunctionComponent<IPropsText> = (props) => {
     switch (props.type) {
-        case ETextType.Default:
         case ETextType.Medium:
-        default:
             return (
-                <div className={`${componentStyleName}-${ETextType.Medium}`}>
+                <div className={`${componentStyleName}-${props.type}`}>
                     {props.text}
                 </div>
             );
+        case ETextType.Default:
+        default:
+            return null;
     };
 };
 

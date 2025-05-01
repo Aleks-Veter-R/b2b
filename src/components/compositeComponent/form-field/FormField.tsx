@@ -8,8 +8,6 @@ const componentStyleName = 'composite-component-form-field';
 const FormField: FunctionComponent<IPropsFormField<TFormFieldValue>> = (props) => {
     switch (props.type) {
         case EFormFieldType.InputField:
-        case EFormFieldType.Default:
-        default:
             let attributesInputField: Omit<IPropsFormFieldInputField, 'className' | 'type' | 'onChange' | 'text'> = {};
 
             if (props.name !== undefined) attributesInputField.name = props.name;
@@ -17,13 +15,16 @@ const FormField: FunctionComponent<IPropsFormField<TFormFieldValue>> = (props) =
 
             return (
                 <InputField
-                    className={componentStyleName}
+                    className={`${componentStyleName}-${props.type}`}
                     type={EFormFieldType.InputField}
                     text={props.text}
                     {...attributesInputField}
                     onChange={props.onChange}
                 />
             );
+        case EFormFieldType.Default:
+        default:
+            return null;
     };
 };
 

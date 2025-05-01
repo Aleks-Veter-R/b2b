@@ -5,6 +5,8 @@ import ControlPanel from '../icon/images/ControlPanel';
 import Logo from '../icon/images/Logo';
 import './styles/index.scss';
 
+const componentStyleName = 'component-icon-svg';
+
 const Icon: FunctionComponent<IPropsIcon> = (props) => {
     let icon: ReactElement = null;
     
@@ -24,7 +26,7 @@ const Icon: FunctionComponent<IPropsIcon> = (props) => {
     };
 
     return (
-        <div className={`component-icon-svg-${props.type}`}>
+        <div className={`${componentStyleName}-${props.type}`}>
             {icon}
         </div>
     );

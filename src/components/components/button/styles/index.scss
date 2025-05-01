@@ -1,0 +1,15 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.component-button-Default {
+    width: 121px;
+    height: 31px;
+    padding: 7px;
+    border: 1px solid defaultVars.$originalThemeSixthColor;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}

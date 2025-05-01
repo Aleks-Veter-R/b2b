@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import InputCheckBox from './components/InputCheckBox';
 import InputText from './components/InputText';
 import { IPropsInput, EInputType, TInputValue } from './interfaces'
 import './styles/index.scss';
@@ -6,18 +7,32 @@ import './styles/index.scss';
 const componentStyleName = 'component-input';
 
 const Input: FunctionComponent<IPropsInput<TInputValue>> = (props) => {
-    let attributes: Omit<IPropsInput<TInputValue>, 'type' | 'onChange'> = {};
-
-    if (props.name !== undefined) attributes.name = props.name;
-    if (props.value !== undefined) attributes.value = props.value;
-
     switch (props.type) {
+        case EInputType.CheckBox:
+            let attributesInputCheckBox: Omit<IPropsInput<boolean>, 'type' | 'onChange' | 'value'> = {};
+
+            if (props.name !== undefined) attributesInputCheckBox.name = props.name;
+            if (props.checked !== undefined) attributesInputCheckBox.checked = props.checked;
+
+            return (
+                <InputCheckBox
+                    type={EInputType.CheckBox}
+                    className={`${componentStyleName}-${props.type}`}
+                    {...attributesInputCheckBox}
+                    onChange={props.onChange}
+                />
+            );
         case EInputType.Text:
+            let attributesInputText: Omit<IPropsInput<string>, 'type' | 'onChange' | 'checked'> = {};
+
+            if (props.name !== undefined) attributesInputText.name = props.name;
+            if (props.value !== undefined) attributesInputText.value = props.value as string;
+
             return (
                 <InputText
                     type={EInputType.Text}
                     className={`${componentStyleName}-${props.type}`}
-                    {...attributes}
+                    {...attributesInputText}
                     onChange={props.onChange}
                 />
             );

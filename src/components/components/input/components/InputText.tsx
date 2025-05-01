@@ -7,7 +7,7 @@ const InputText: FunctionComponent<IPropsInputText> = (props) => {
         props.onChange(event.target.value)
     }
 
-    let attributes: Omit<IPropsInputText, 'className' | 'type' | 'onChange'> = {};
+    let attributes: Omit<IPropsInputText, 'className' | 'type' | 'onChange' | 'checked'> = {};
 
     if (props.name !== undefined) attributes.name = props.name;
     if (props.value !== undefined) attributes.value = props.value;

@@ -11,7 +11,7 @@ const InputField: FunctionComponent<IPropsFormFieldInputField> = (props) => {
     if (props.value !== undefined) attributesInput.value = props.value;
 
     return (
-        <div className={`${props.className}-InputField`}>
+        <div className={props.className}>
             <Text type={ETextType.Medium} text={props.text} />
             <div className='field'>
                 <Input

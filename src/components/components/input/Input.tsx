@@ -13,8 +13,6 @@ const Input: FunctionComponent<IPropsInput<TInputValue>> = (props) => {
 
     switch (props.type) {
         case EInputType.Text:
-        case EInputType.Default:
-        default:
             return (
                 <InputText
                     type={EInputType.Text}
@@ -23,6 +21,9 @@ const Input: FunctionComponent<IPropsInput<TInputValue>> = (props) => {
                     onChange={props.onChange}
                 />
             );
+        case EInputType.Default:
+        default:
+            return null;
     };
 };
 

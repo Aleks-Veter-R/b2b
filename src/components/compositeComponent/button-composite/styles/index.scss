@@ -1,0 +1,23 @@
+.composite-component-button-composite-TwoButtonField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    >div:nth-child(1) {
+        width: 138px;
+        margin-right: 8px;
+    }
+
+    >div:nth-child(2) {
+        width: 248px;
+        display: flex;
+        justify-content: space-between;
+
+        // Ошибка в макетах неправильный размер
+        // Страница создания лота, последний элемент
+        // в средней колонке, заехал за границу колонки
+        & > button {
+            width: 119px;
+        }
+    }
+}

@@ -1,11 +1,12 @@
 import { FunctionComponent } from 'react';
 import { IPropsFormFieldInputField } from '../interfaces';
-import Input, { EInputType } from '../../../components/input';
+import Input, { EInputType, IPropsInputText } from '../../../components/input';
 import Text, { ETextType } from '../../../components/text';
 import '../styles/index.scss';
 
 const InputField: FunctionComponent<IPropsFormFieldInputField> = (props) => {
-    let attributesInput: Omit<IPropsFormFieldInputField, 'className' | 'type' | 'onChange' | 'text'> = {};
+    let attributesInput:
+        Omit<IPropsInputText, 'className' | 'type' | 'checked' | 'onChange'> = {};
 
     if (props.name !== undefined) attributesInput.name = props.name;
     if (props.value !== undefined) attributesInput.value = props.value;

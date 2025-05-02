@@ -1,6 +1,6 @@
 import { EFormFieldType } from './enums';
 
-type TFormFieldValue = string;
+type TFormFieldValue = string | boolean;
 
 interface IPropsFormField<T> {
     type: EFormFieldType;
@@ -8,6 +8,12 @@ interface IPropsFormField<T> {
     name?: string;
     value?: T;
     onChange: (value: T) => void;
+}
+
+interface IPropsFormFieldCheckBoxField extends IPropsFormField<boolean> {
+    className: string;
+    type: EFormFieldType.CheckBoxField;
+    onChange: (value: boolean) => void;
 }
 
 interface IPropsFormFieldInputField extends IPropsFormField<string> {
@@ -20,5 +26,6 @@ export {
     TFormFieldValue,
     EFormFieldType,
     IPropsFormField,
+    IPropsFormFieldCheckBoxField,
     IPropsFormFieldInputField,
 };

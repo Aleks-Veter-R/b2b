@@ -1,10 +1,12 @@
-.composite-component-button-composite-TwoButtonField {
+.composite-component-button-composite-TwoButtonField,
+.composite-component-button-composite-TwoButtonFieldWithState {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     >div:nth-child(1) {
-        width: 138px;
+        // width: 138px;
+        flex: 1;
         margin-right: 8px;
     }
 

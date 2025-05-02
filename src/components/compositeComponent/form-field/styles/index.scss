@@ -1,13 +1,30 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
 .composite-component-form-field-InputField {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    >div:nth-child(1) {
+    > div:nth-child(1) {
         width: 161px;
     }
 
-    >div:nth-child(2) {
+    > div:nth-child(2) {
         width: 121px;
+    }
+}
+
+.composite-component-form-field-CheckBoxField {
+    min-height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > div:nth-child(2) {
+        flex: 1;
+        height: 18px;
+        box-sizing: border-box;
+        border-bottom: 1px dashed defaultVars.$originalThemeNinthColor;
+        margin: 0px 7px;
     }
 }

@@ -5,10 +5,14 @@ import './styles/index.scss';
 const componentStyleName = 'component-text';
 
 const Text: FunctionComponent<IPropsText> = (props) => {
+    let styleName = `${componentStyleName}-${props.type}`;
+
+    if (props.isDisabled) styleName += ' isDisabled';
+
     switch (props.type) {
         case ETextType.Medium:
             return (
-                <div className={`${componentStyleName}-${props.type}`}>
+                <div className={styleName}>
                     {props.text}
                 </div>
             );

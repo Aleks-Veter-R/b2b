@@ -1,5 +1,39 @@
 @use '../../../../styles/DefaultVars.scss' as defaultVars;
 
+.component-input-CheckBox {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 2px solid defaultVars.$originalThemeNinthColor;
+    border-radius: 3px;
+
+    &:checked {
+        appearance: auto;
+    }
+}
+
+.component-input-DifferentText {
+    width: 100%;
+    padding: 3px 5px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: defaultVars.$originalThemeThirdColor;
+    background-color: defaultVars.$originalThemeSeventhColor;
+
+    &:focus {
+        border: none;
+        outline: none;
+        background-color: defaultVars.$originalThemeEleventhColor;
+    }
+}
+
 .component-input-Text {
     width: 100%;
     padding: 7px 5px;
@@ -14,20 +48,5 @@
 
     &:focus {
         background-color: defaultVars.$originalThemeEleventhColor;
-    }
-}
-
-.component-input-CheckBox {
-    appearance: none;
-    width: 24px;
-    height: 24px;
-    margin: 0;
-    padding: 0;
-    outline: none;
-    border: 2px solid defaultVars.$originalThemeNinthColor;
-    border-radius: 3px;
-
-    &:checked {
-        appearance: auto;
     }
 }

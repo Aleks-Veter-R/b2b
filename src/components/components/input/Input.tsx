@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import InputCheckBox from './components/InputCheckBox';
+import InputDifferentText from './components/InputDifferentText';
 import InputText from './components/InputText';
 import { IPropsInput, EInputType, TInputValue } from './interfaces'
 import './styles/index.scss';
@@ -19,6 +20,20 @@ const Input: FunctionComponent<IPropsInput<TInputValue>> = (props) => {
                     type={EInputType.CheckBox}
                     className={`${componentStyleName}-${props.type}`}
                     {...attributesInputCheckBox}
+                    onChange={props.onChange}
+                />
+            );
+        case EInputType.DifferentText:
+            let attributesInputDifferentText: Omit<IPropsInput<string>, 'type' | 'onChange' | 'checked'> = {};
+
+            if (props.name !== undefined) attributesInputDifferentText.name = props.name;
+            if (props.value !== undefined) attributesInputDifferentText.value = props.value as string;
+
+            return (
+                <InputDifferentText
+                    type={EInputType.DifferentText}
+                    className={`${componentStyleName}-${props.type}`}
+                    {...attributesInputDifferentText}
                     onChange={props.onChange}
                 />
             );

@@ -4,8 +4,11 @@ import {
     TFormFieldValue,
     IPropsFormField,
     IPropsFormFieldCheckBoxField,
-    IPropsFormFieldInputField } from './interfaces';
+    IPropsFormFieldInputField,
+    IPropsFormFieldInputDifferentTextField,
+} from './interfaces';
 import InputCheckbox from './components/InputCheckbox';
+import InputDifferentTextField from './components/InputDifferentTextField';
 import InputField from './components/InputField';
 import './styles/index.scss';
 
@@ -26,6 +29,25 @@ const FormField: FunctionComponent<IPropsFormField<TFormFieldValue>> = (props) =
                     type={EFormFieldType.CheckBoxField}
                     text={props.text}
                     {...attributesCheckBoxField}
+                    onChange={props.onChange}
+                />
+            );
+        case EFormFieldType.InputDifferentTextField:
+            let attributesInputDifferentTextField:
+                Omit<IPropsFormFieldInputDifferentTextField, 'className' | 'type' | 'text' | 'onChange'> = {};
+
+            if (props.name !== undefined) attributesInputDifferentTextField.name = props.name;
+            if (props.value !== undefined) attributesInputDifferentTextField.value = props.value as string;
+            if (props.isActiveState !== undefined)
+                attributesInputDifferentTextField.isActiveState = props.isActiveState;
+
+
+            return (
+                <InputDifferentTextField
+                    className={`${componentStyleName}-${props.type}`}
+                    type={EFormFieldType.InputDifferentTextField}
+                    text={props.text}
+                    {...attributesInputDifferentTextField}
                     onChange={props.onChange}
                 />
             );

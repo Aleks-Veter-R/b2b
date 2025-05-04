@@ -1,8 +1,8 @@
 import { FunctionComponent } from 'react';
-import { IPropsButtonDefault } from '../interfaces';
+import { IPropsButtonActionButton } from '../interfaces';
 import '../styles/index.scss';
 
-const ButtonDefault: FunctionComponent<IPropsButtonDefault> = (props) => {
+const ButtonActionButton: FunctionComponent<IPropsButtonActionButton> = (props) => {
     const onClick = () => {
         if (!props.isInactive) props.onClick();
     }
@@ -17,4 +17,4 @@ const ButtonDefault: FunctionComponent<IPropsButtonDefault> = (props) => {
     );
 };
 
-export default ButtonDefault;
+export default ButtonActionButton;

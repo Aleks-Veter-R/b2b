@@ -16,6 +16,12 @@ interface IPropsInputText extends IPropsInput<string> {
     onChange: (value: string) => void;
 }
 
+interface IPropsInputDifferentText extends IPropsInput<string> {
+    className: string;
+    type: EInputType.DifferentText;
+    onChange: (value: string) => void;
+}
+
 interface IPropsInputCheckBox extends IPropsInput<boolean> {
     className: string;
     type: EInputType.CheckBox;
@@ -27,5 +33,6 @@ export {
     EInputType,
     IPropsInput,
     IPropsInputCheckBox,
+    IPropsInputDifferentText,
     IPropsInputText,
 };

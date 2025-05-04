@@ -1,6 +1,7 @@
 const enum EInputType {
-    Text = 'Text',
     CheckBox = 'CheckBox',
+    DifferentText = 'DifferentText',
+    Text = 'Text',
     Default = 'Default',
 };
 

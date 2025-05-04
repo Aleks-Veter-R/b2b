@@ -7,6 +7,7 @@ interface IPropsFormField<T> {
     text: string;
     name?: string;
     value?: T;
+    isActiveState?: boolean;
     onChange: (value: T) => void;
 }
 
@@ -14,6 +15,12 @@ interface IPropsFormFieldCheckBoxField extends IPropsFormField<boolean> {
     className: string;
     type: EFormFieldType.CheckBoxField;
     onChange: (value: boolean) => void;
+}
+
+interface IPropsFormFieldInputDifferentTextField extends IPropsFormField<string> {
+    className: string;
+    type: EFormFieldType.InputDifferentTextField;
+    onChange: (value: string) => void;
 }
 
 interface IPropsFormFieldInputField extends IPropsFormField<string> {
@@ -27,5 +34,6 @@ export {
     EFormFieldType,
     IPropsFormField,
     IPropsFormFieldCheckBoxField,
+    IPropsFormFieldInputDifferentTextField,
     IPropsFormFieldInputField,
 };

@@ -1,6 +1,6 @@
 import { EDropDownType } from './enums';
 
-type TdropDownValue = string;
+type TDropDownValue = string;
 
 interface IPropsDropDownItem<T> {
     title: string;
@@ -22,7 +22,7 @@ interface IPropsDropDownBase extends IPropsDropDown<string> {
 
 export {
     EDropDownType,
-    TdropDownValue,
+    TDropDownValue,
     IPropsDropDownItem,
     IPropsDropDown,
     IPropsDropDownBase,

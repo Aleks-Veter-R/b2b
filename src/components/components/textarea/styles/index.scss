@@ -1,0 +1,16 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.component-textarea-Base {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    box-sizing: border-box;
+    background-color: defaultVars.$originalThemeSeventhColor;
+    resize: none;
+
+    &:focus {
+        border: none;
+        outline: none;
+        background-color: #FFFFFF;
+    }
+}

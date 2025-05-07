@@ -11,7 +11,7 @@
     border-radius: 3px;
 
     &:checked {
-        appearance: auto;
+        background: no-repeat center center url('../../../../assets/check.png') defaultVars.$originalThemeFourthColor;
     }
 }
 

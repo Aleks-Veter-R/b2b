@@ -6,10 +6,12 @@ import {
     IPropsFormFieldCheckBoxField,
     IPropsFormFieldInputField,
     IPropsFormFieldInputDifferentTextField,
+    IPropsFormFieldTextAreaField,
 } from './interfaces';
 import InputCheckbox from './components/InputCheckbox';
 import InputDifferentTextField from './components/InputDifferentTextField';
 import InputField from './components/InputField';
+import TextAreaField from './components/TextAreaField';
 import './styles/index.scss';
 
 const componentStyleName = 'composite-component-form-field';
@@ -33,6 +35,7 @@ const FormField: FunctionComponent<IPropsFormField<TFormFieldValue>> = (props) =
                 />
             );
         case EFormFieldType.InputDifferentTextField:
+        case EFormFieldType.InputDifferentTextMainField:
             let attributesInputDifferentTextField:
                 Omit<IPropsFormFieldInputDifferentTextField, 'className' | 'type' | 'text' | 'onChange'> = {};
 
@@ -40,7 +43,6 @@ const FormField: FunctionComponent<IPropsFormField<TFormFieldValue>> = (props) =
             if (props.value !== undefined) attributesInputDifferentTextField.value = props.value as string;
             if (props.isActiveState !== undefined)
                 attributesInputDifferentTextField.isActiveState = props.isActiveState;
-
 
             return (
                 <InputDifferentTextField
@@ -64,6 +66,25 @@ const FormField: FunctionComponent<IPropsFormField<TFormFieldValue>> = (props) =
                     type={EFormFieldType.InputField}
                     text={props.text}
                     {...attributesInputField}
+                    onChange={props.onChange}
+                />
+            );
+        case EFormFieldType.TextAreaField:
+            let attributesTextAreaField:
+                Omit<IPropsFormFieldTextAreaField, 'className' | 'type' | 'text' | 'onChange'> = {};
+
+            if (props.name !== undefined) attributesTextAreaField.name = props.name;
+            if (props.value !== undefined) attributesTextAreaField.value = props.value as string;
+            if (props.isActiveState !== undefined) attributesTextAreaField.isActiveState = props.isActiveState;
+            if (props.maxlength !== undefined) attributesTextAreaField.maxlength = props.maxlength;
+            if (props.rows !== undefined) attributesTextAreaField.rows = props.rows;
+
+            return (
+                <TextAreaField
+                    className={`${componentStyleName}-${props.type}`}
+                    type={EFormFieldType.TextAreaField}
+                    text={props.text}
+                    {...attributesTextAreaField}
                     onChange={props.onChange}
                 />
             );

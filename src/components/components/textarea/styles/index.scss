@@ -7,6 +7,9 @@
     box-sizing: border-box;
     background-color: defaultVars.$originalThemeSeventhColor;
     resize: none;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
 
     &:focus {
         border: none;

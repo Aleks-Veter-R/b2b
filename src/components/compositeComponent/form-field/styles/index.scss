@@ -30,6 +30,32 @@
     }
 }
 
+.composite-component-form-field-InputDifferentTextMainField {
+    height: 37px;
+    display: flex;
+    justify-content: space-between;
+
+    > div:nth-child(1) {
+        flex: 1;
+        padding: 10px 0 10px 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+
+    > div:nth-child(2) {
+        box-sizing: border-box;
+
+        input {
+            padding: 10px 5px;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+    }
+}
+
 .composite-component-form-field-InputField {
     display: flex;
     justify-content: space-between;
@@ -41,5 +67,20 @@
 
     > div:nth-child(2) {
         width: 121px;
+    }
+}
+
+.composite-component-form-field-TextAreaField {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    > div:nth-child(1) {
+        flex: 1;
+        padding: 10px 0 10px 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
     }
 }

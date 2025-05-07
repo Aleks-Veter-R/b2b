@@ -1,11 +1,11 @@
 import { FunctionComponent } from 'react';
-import { EDropDownType, TdropDownValue, IPropsDropDown } from './interfaces';
+import { EDropDownType, TDropDownValue, IPropsDropDown } from './interfaces';
 import DropDownBase from './components/DropDownBase'
 import './styles/index.scss';
 
 const componentStyleName = 'component-dropdown';
 
-const DropDown: FunctionComponent<IPropsDropDown<TdropDownValue>> = (props) => {
+const DropDown: FunctionComponent<IPropsDropDown<TDropDownValue>> = (props) => {
     let styleName = `${componentStyleName}-${props.type}`;
 
     switch (props.type) {

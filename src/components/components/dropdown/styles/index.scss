@@ -1,0 +1,76 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.component-dropdown-Base {
+    width: 100%;
+    display: flex;
+
+    .value-fields {
+        height: 37px;
+        margin-right: 10px;
+        position: relative;
+        flex: 1;
+
+        .current-value {
+            height: 100%;
+            width: 100%;
+            padding: 10px 5px;
+            box-sizing: border-box;
+            background-color: defaultVars.$originalThemeSeventhColor;
+            border-radius: 5px;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 500;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .dropdown-list {
+            display: none;
+            width: 100%;
+            position: absolute;
+            top: 41px;
+            left: 0;
+            background: defaultVars.$originalThemeEleventhColor;
+            border-radius: 5px;
+            z-index: 10001;
+
+            .item-value {
+                padding: 10px 5px;
+                font-size: 14px;
+                line-height: 17px;
+                font-weight: 500;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                cursor: pointer;
+            }
+        }
+    
+        .dropdown-list.open {
+            display: block;
+        }    
+    }
+
+    .control-field {
+        width: 37px;
+        height: 37px;
+        flex: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: defaultVars.$originalThemeSeventhColor;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .control-field.open {
+        > div {
+            transform: rotate(180deg);
+        }
+    }
+}

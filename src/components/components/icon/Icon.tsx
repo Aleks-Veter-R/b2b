@@ -1,6 +1,7 @@
 import { FunctionComponent, ReactElement } from 'react';
-import { IPropsIcon } from './interfaces';
+import { EIconType, IPropsIcon } from './interfaces';
 import Arrow from '../icon/images/Arrow';
+import ArrowSmall from '../icon/images/ArrowSmall';
 import ControlPanel from '../icon/images/ControlPanel';
 import Logo from '../icon/images/Logo';
 import './styles/index.scss';
@@ -11,13 +12,16 @@ const Icon: FunctionComponent<IPropsIcon> = (props) => {
     let icon: ReactElement = null;
     
     switch (props.type) {
-        case 'Arrow':
+        case EIconType.Arrow:
             icon = <Arrow />;
             break;
-        case 'ControlPanel':
+        case EIconType.ArrowSmall:
+            icon = <ArrowSmall />;
+            break;
+        case EIconType.ControlPanel:
             icon = <ControlPanel />;
             break;
-        case 'Logo':
+        case EIconType.Logo:
             icon = <Logo />;
             break;
         case 'Default':

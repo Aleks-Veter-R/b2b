@@ -8,6 +8,8 @@ interface IPropsFormField<T> {
     name?: string;
     value?: T;
     isActiveState?: boolean;
+    maxlength?: number;
+    rows?: number;
     onChange: (value: T) => void;
 }
 
@@ -29,6 +31,12 @@ interface IPropsFormFieldInputField extends IPropsFormField<string> {
     onChange: (value: string) => void;
 }
 
+interface IPropsFormFieldTextAreaField extends IPropsFormField<string> {
+    className: string;
+    type: EFormFieldType.TextAreaField;
+    onChange: (value: string) => void;
+}
+
 export {
     TFormFieldValue,
     EFormFieldType,
@@ -36,4 +44,5 @@ export {
     IPropsFormFieldCheckBoxField,
     IPropsFormFieldInputDifferentTextField,
     IPropsFormFieldInputField,
+    IPropsFormFieldTextAreaField,
 };

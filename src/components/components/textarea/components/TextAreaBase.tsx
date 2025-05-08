@@ -9,7 +9,7 @@ const TextAreaBase: FunctionComponent<IPropsTextAreaBase> = (props) => {
 
     let attributes: Omit<IPropsTextAreaBase, 'className' | 'type' | 'onChange'> = {};
 
-    if (props.maxlength !== undefined) attributes.maxlength = props.maxlength;
+    if (props.maxLength !== undefined) attributes.maxLength = props.maxLength;
     if (props.name !== undefined) attributes.name = props.name;
     if (props.rows !== undefined) attributes.rows = props.rows;
     if (props.value !== undefined) attributes.value = props.value;

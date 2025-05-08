@@ -3,7 +3,7 @@ import { FunctionComponent } from 'react';
 const Arrow: FunctionComponent = () => {
     return (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="keyboard_arrow_down" clip-path="url(#clip0_361_18429)">
+            <g id="keyboard_arrow_down" clipPath="url(#clip0_361_18429)">
                 <path id="Vector" d="M7.41 8.58984L12 13.1698L16.59 8.58984L18 9.99984L12 15.9998L6 9.99984L7.41 8.58984Z" fill="black"/>
             </g>
             <defs>

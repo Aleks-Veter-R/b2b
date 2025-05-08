@@ -78,7 +78,7 @@ const FormField: FunctionComponent<IPropsFormField<TFormFieldValue>> = (props) =
             if (props.name !== undefined) attributesTextAreaField.name = props.name;
             if (props.value !== undefined) attributesTextAreaField.value = props.value as string;
             if (props.isActiveState !== undefined) attributesTextAreaField.isActiveState = props.isActiveState;
-            if (props.maxlength !== undefined) attributesTextAreaField.maxlength = props.maxlength;
+            if (props.maxLength !== undefined) attributesTextAreaField.maxLength = props.maxLength;
             if (props.rows !== undefined) attributesTextAreaField.rows = props.rows;
 
             return (
@@ -94,8 +94,8 @@ const FormField: FunctionComponent<IPropsFormField<TFormFieldValue>> = (props) =
             let attributesDropDownField:
                 Omit<IPropsFormFieldDropDownField, 'className' | 'type' | 'value' | 'text' | 'onChange'> = {};
 
-            if (props.name !== undefined) attributesTextAreaField.name = props.name;
-            if (props.isActiveState !== undefined) attributesTextAreaField.isActiveState = props.isActiveState;
+            if (props.name !== undefined) attributesDropDownField.name = props.name;
+            if (props.isActiveState !== undefined) attributesDropDownField.isActiveState = props.isActiveState;
 
             return (
                 <DropDownField

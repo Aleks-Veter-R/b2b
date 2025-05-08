@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 import { EButtonType, IPropsButton } from './interfaces';
 import ButtonActionButton from './components/ButtonActionButton'
+import ButtonActionButtonGray from './components/ButtonActionButtonGray';
 import ButtonDefault from './components/ButtonDefault';
 import './styles/index.scss';
 
@@ -17,6 +18,16 @@ const Button: FunctionComponent<IPropsButton> = (props) => {
                 <ButtonActionButton
                     {...props}
                     type={EButtonType.ActionButton}
+                    className={styleName}
+                    title={props.title}
+                    onClick={props.onClick}
+                />
+            );
+        case EButtonType.ActionButtonGray:
+            return (
+                <ButtonActionButtonGray
+                    {...props}
+                    type={EButtonType.ActionButtonGray}
                     className={styleName}
                     title={props.title}
                     onClick={props.onClick}

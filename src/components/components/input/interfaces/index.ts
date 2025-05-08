@@ -1,25 +1,16 @@
 import { EInputType } from './enums';
 
 type TInputValue = string | boolean;
+type TImageType = '.png' | '.jpg' | '.jpeg';
 
 interface IPropsInput<T> {
     type: EInputType;
     name?: string;
     value?: T;
     checked?: boolean;
+    imageType?: TImageType[];
+    imageSizeMb?: number;
     onChange: (value: T) => void;
-}
-
-interface IPropsInputText extends IPropsInput<string> {
-    className: string;
-    type: EInputType.Text;
-    onChange: (value: string) => void;
-}
-
-interface IPropsInputDifferentText extends IPropsInput<string> {
-    className: string;
-    type: EInputType.DifferentText;
-    onChange: (value: string) => void;
 }
 
 interface IPropsInputCheckBox extends IPropsInput<boolean> {
@@ -28,11 +19,31 @@ interface IPropsInputCheckBox extends IPropsInput<boolean> {
     onChange: (value: boolean) => void;
 }
 
+interface IPropsInputDifferentText extends IPropsInput<string> {
+    className: string;
+    type: EInputType.DifferentText;
+    onChange: (value: string) => void;
+}
+
+interface IPropsInputFileImage extends IPropsInput<File | null> {
+    className: string;
+    type: EInputType.InputFileImage;
+    onChange: (value: File | null) => void;
+}
+
+interface IPropsInputText extends IPropsInput<string> {
+    className: string;
+    type: EInputType.Text;
+    onChange: (value: string) => void;
+}
+
 export {
-    TInputValue,
     EInputType,
+    TImageType,
+    TInputValue,
     IPropsInput,
     IPropsInputCheckBox,
     IPropsInputDifferentText,
+    IPropsInputFileImage,
     IPropsInputText,
 };

@@ -12,6 +12,11 @@ interface IPropsButtonActionButton extends IPropsButton {
     type: EButtonType.ActionButton;
 }
 
+interface IPropsButtonActionButtonGray extends IPropsButton {
+    className: string;
+    type: EButtonType.ActionButtonGray;
+}
+
 interface IPropsButtonDefault extends IPropsButton {
     className: string;
     type: EButtonType.Default;
@@ -21,5 +26,6 @@ export {
     EButtonType,
     IPropsButton,
     IPropsButtonActionButton,
+    IPropsButtonActionButtonGray,
     IPropsButtonDefault,
 };

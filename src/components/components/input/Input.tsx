@@ -1,8 +1,9 @@
 import { FunctionComponent } from 'react';
 import InputCheckBox from './components/InputCheckBox';
 import InputDifferentText from './components/InputDifferentText';
+import InputFile from './components/InputFile';
 import InputText from './components/InputText';
-import { IPropsInput, EInputType, TInputValue } from './interfaces'
+import { IPropsInput, EInputType, TInputValue, IPropsInputFileImage } from './interfaces'
 import './styles/index.scss';
 
 const componentStyleName = 'component-input';
@@ -37,6 +38,26 @@ const Input: FunctionComponent<IPropsInput<TInputValue>> = (props) => {
                     onChange={props.onChange}
                 />
             );
+        case EInputType.InputFileImage:
+            let attributesInputFileImage: Omit<
+                IPropsInputFileImage,
+                'className' | 'type' | 'onChange' | 'value' | 'checked'
+            > = {};
+
+            if (props.name !== undefined) attributesInputFileImage.name = props.name;
+            if (props.imageType !== undefined) attributesInputFileImage.imageType = props.imageType;
+            if (props.imageSizeMb !== undefined) attributesInputFileImage.imageSizeMb = props.imageSizeMb;
+
+            return (
+                <InputFile
+                    type={EInputType.InputFileImage}
+                    className={`${componentStyleName}-${props.type}`}
+                    {...attributesInputFileImage}
+                    onChange={(value) => console.log('value', value)}
+                />
+            );
+
+
         case EInputType.Text:
             let attributesInputText: Omit<IPropsInput<string>, 'type' | 'onChange' | 'checked'> = {};
 

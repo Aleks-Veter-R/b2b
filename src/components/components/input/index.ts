@@ -7,5 +7,6 @@ export type {
     IPropsInput,
     IPropsInputCheckBox,
     IPropsInputDifferentText,
+    IPropsInputFileImage,
     IPropsInputText,
 } from './interfaces';

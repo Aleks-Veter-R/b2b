@@ -1,6 +1,7 @@
 import { EFormFieldType } from './enums';
+import { TDropDownValue, IPropsDropDownItem } from '../../../components/dropdown/interfaces';
 
-type TFormFieldValue = string | boolean;
+type TFormFieldValue = string | boolean | IPropsDropDownItem<TDropDownValue>;
 
 interface IPropsFormField<T> {
     type: EFormFieldType;
@@ -10,6 +11,7 @@ interface IPropsFormField<T> {
     isActiveState?: boolean;
     maxlength?: number;
     rows?: number;
+    itemList?: IPropsDropDownItem<TDropDownValue>[];
     onChange: (value: T) => void;
 }
 
@@ -37,6 +39,13 @@ interface IPropsFormFieldTextAreaField extends IPropsFormField<string> {
     onChange: (value: string) => void;
 }
 
+interface IPropsFormFieldDropDownField extends IPropsFormField<IPropsDropDownItem<TDropDownValue>> {
+    className: string;
+    type: EFormFieldType.DropDownField;
+    value: IPropsDropDownItem<TDropDownValue> | null,
+    onChange: (value: IPropsDropDownItem<TDropDownValue>) => void;
+}
+
 export {
     TFormFieldValue,
     EFormFieldType,
@@ -45,4 +54,5 @@ export {
     IPropsFormFieldInputDifferentTextField,
     IPropsFormFieldInputField,
     IPropsFormFieldTextAreaField,
+    IPropsFormFieldDropDownField,
 };

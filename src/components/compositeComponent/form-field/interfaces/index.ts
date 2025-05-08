@@ -9,7 +9,7 @@ interface IPropsFormField<T> {
     name?: string;
     value?: T;
     isActiveState?: boolean;
-    maxlength?: number;
+    maxLength?: number;
     rows?: number;
     itemList?: IPropsDropDownItem<TDropDownValue>[];
     onChange: (value: T) => void;

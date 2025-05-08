@@ -10,7 +10,7 @@ const TextAreaField: FunctionComponent<IPropsFormFieldTextAreaField> = (props) =
 
     if (props.name !== undefined) attributesTextArea.name = props.name;
     if (props.value !== undefined) attributesTextArea.value = props.value;
-    if (props.maxlength !== undefined) attributesTextArea.maxlength = props.maxlength;
+    if (props.maxLength !== undefined) attributesTextArea.maxLength = props.maxLength;
     if (props.rows !== undefined) attributesTextArea.rows = props.rows;
 
     const disabledFlag: Omit<IPropsText, 'type' | 'text'> = {};

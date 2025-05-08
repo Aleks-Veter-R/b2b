@@ -2,7 +2,7 @@ import { ETextAreaType } from './enums';
 
 interface IPropsTextArea {
     type: ETextAreaType;
-    maxlength?: number;
+    maxLength?: number;
     name?: string;
     rows?: number;
     value?: string;

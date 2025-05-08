@@ -3,6 +3,7 @@ const enum EIconType {
     ArrowSmall = 'ArrowSmall',
     Check = 'Check',
     ControlPanel = 'ControlPanel',
+    DefaultPhoto = 'DefaultPhoto',
     Logo = 'Logo',
     Default = 'Default',
 };

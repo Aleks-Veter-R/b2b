@@ -4,6 +4,7 @@ const enum EFormFieldType {
     InputDifferentTextMainField = 'InputDifferentTextMainField',
     InputField = 'InputField',
     TextAreaField = 'TextAreaField',
+    DropDownField = 'DropDownField',
     Default = 'Default',
 };
 

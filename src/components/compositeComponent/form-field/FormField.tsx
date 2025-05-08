@@ -7,11 +7,13 @@ import {
     IPropsFormFieldInputField,
     IPropsFormFieldInputDifferentTextField,
     IPropsFormFieldTextAreaField,
+    IPropsFormFieldDropDownField,
 } from './interfaces';
 import InputCheckbox from './components/InputCheckbox';
 import InputDifferentTextField from './components/InputDifferentTextField';
 import InputField from './components/InputField';
 import TextAreaField from './components/TextAreaField';
+import DropDownField, { IPropsDropDownItem } from './components/DropDownField';
 import './styles/index.scss';
 
 const componentStyleName = 'composite-component-form-field';
@@ -85,6 +87,24 @@ const FormField: FunctionComponent<IPropsFormField<TFormFieldValue>> = (props) =
                     type={EFormFieldType.TextAreaField}
                     text={props.text}
                     {...attributesTextAreaField}
+                    onChange={props.onChange}
+                />
+            );
+        case EFormFieldType.DropDownField:
+            let attributesDropDownField:
+                Omit<IPropsFormFieldDropDownField, 'className' | 'type' | 'value' | 'text' | 'onChange'> = {};
+
+            if (props.name !== undefined) attributesTextAreaField.name = props.name;
+            if (props.isActiveState !== undefined) attributesTextAreaField.isActiveState = props.isActiveState;
+
+            return (
+                <DropDownField
+                    className={`${componentStyleName}-${props.type}`}
+                    type={EFormFieldType.DropDownField}
+                    text={props.text}
+                    value={props.value as IPropsDropDownItem<string>}
+                    itemList={props.itemList}
+                    {...attributesDropDownField}
                     onChange={props.onChange}
                 />
             );

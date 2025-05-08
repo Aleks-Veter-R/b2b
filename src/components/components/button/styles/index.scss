@@ -22,6 +22,24 @@
     background-color: defaultVars.$originalThemeSeventhColor;
 }
 
+.component-button-ActionButtonGray {
+    min-width: 225px;
+    height: 55px;
+    padding: 16px 21px;
+    box-sizing: border-box;
+    border: 2px solid defaultVars.$originalThemeThirdColor;
+    border-radius: 10px;
+    
+    background-color: defaultVars.$originalThemeSeventhColor;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover { opacity: 0.5; }
+}
+
 .component-button-Default {
     width: 121px;
     height: 31px;

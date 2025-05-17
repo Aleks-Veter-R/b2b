@@ -1,10 +1,21 @@
 import { PropsWithChildren, useEffect } from 'react';
+import { getTest } from '../../rests/rests/fetchFns'
 import Divider,  { EDividerType } from './components/divider';
 import MainNavigation from './components/mainNavigation';
 import Title, { ETitleType } from './components/title';
 import Icon, { EIconType } from './components/icon';
+import LeftMenu from './compositeComponent/leftMenu';
+import { useLocation } from "react-router-dom";
 
 const BasicThreeColumnLayout = (props: PropsWithChildren) => {
+    const location = useLocation();
+
+    useEffect(() => {
+        getTest('http://localhost:9090/test-rest');
+    }, []);
+
+    console.log(location); // b*$W48&bdK@17
+
     return (
         <div className='root-parent'>
             <div className='root-header'>
@@ -22,6 +33,9 @@ const BasicThreeColumnLayout = (props: PropsWithChildren) => {
                     <div className='divider-wrapper-left-sidebar-header'>
                         <Divider type={EDividerType.Default} />
                     </div>
+                    <LeftMenu
+                        treeData={[]}
+                    />
                 </div>
                 <div className='root-body-main-content'>
                     {props.children}

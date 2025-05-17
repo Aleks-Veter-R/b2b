@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router';
 import { Main } from '../components/Main';
 import { First } from '../components/First';
+import { CreateLot } from '../components/pages/controlPanel/sales/createLot/CreateLot';
 
 const AppRoutes = () => {
     const navigationRouts = [
@@ -14,7 +15,7 @@ const AppRoutes = () => {
         },
         {
             path: '/controlPanel/sales/createLot',
-            element: <First />,
+            element: <CreateLot />,
         },
     ];
 

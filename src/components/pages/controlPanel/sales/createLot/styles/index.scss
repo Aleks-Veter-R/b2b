@@ -1,0 +1,168 @@
+// @use '../../../styles/DefaultVars.scss' as defaultVars;
+@use '../../../../../../styles/DefaultVars.scss' as defaultVars;
+
+.page-create-lot-sale-main-info {
+    margin: 23px 0;
+
+    .page-create-lot-sale-main-info-body {
+        margin-top: 25px;
+        // height: 265px;
+        display: flex;
+        justify-content: space-between;
+
+        .page-create-lot-sale-main-info-body-photo {
+            width: 220px;
+        }
+
+        .page-create-lot-sale-main-info-body-content {
+            width: 994px;
+            display: flex;
+            justify-content: space-between;
+
+            .page-create-lot-sale-main-info-body-content-left {
+                width: 593px;
+
+                > div {
+                    margin-top: 14px;
+
+                    > div:nth-child(2) {
+                        width: 435px;
+                    }
+                }
+
+                > div:nth-child(1) {
+                    margin-top: 0;
+                }
+            }
+
+            .page-create-lot-sale-main-info-body-content-right {
+                width: 386px;
+
+                > div {
+                    margin-top: 14px;
+
+                    > div:nth-child(2) {
+                        width: 233px;
+                    }
+                }
+
+                > div:nth-child(1) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.page-create-lot-sale-terms-sale {
+    margin: 23px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    > div {
+        width: 395px;
+        // height: 305px;
+
+        > div:nth-child(2) {
+            margin-top: 21px;
+            min-height: 250px;
+        }
+    }
+
+    > div:nth-child(1) {
+        width: 381px;
+        
+        > div:nth-child(2) {
+            padding-right: 19px;
+            box-sizing: border-box;
+            border-right: 2px solid defaultVars.$originalThemeEighthColor;
+        }
+    }
+
+    > div:nth-child(3) {
+        width: 416px;
+        
+        > div:nth-child(2) {
+            padding-left: 19px;
+            box-sizing: border-box;
+            border-left: 2px solid defaultVars.$originalThemeEighthColor;
+        }
+    }
+
+    .composite-component-form-field-InputField,
+    .composite-component-button-composite-TwoButtonField {
+        margin-top: 20px;
+    }
+
+    .composite-component-form-field-InputField:nth-child(1),
+    .composite-component-button-composite-TwoButtonField:nth-child(1) {
+        margin-top: 0;
+    }
+}
+
+.page-create-lot-sale-additional-info {
+    margin: 23px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    > div:nth-child(1) {
+        width: 766px;
+
+        > div:nth-child(2) {
+            // FIXME Решить вопрос с высотой блока
+            height: 447px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+
+            > div:nth-child(1) {
+                width: 459px;
+                padding-right: 19px;
+                box-sizing: border-box;
+            }
+
+            > div:nth-child(2) {
+                // width: 267px;
+                width: 307px;
+                padding: 0 19px;
+                box-sizing: border-box;
+                border-left: 2px solid defaultVars.$originalThemeEighthColor;
+            }
+        }
+    }
+
+    > div:nth-child(2) {
+        width: 468px;
+
+        > div:nth-child(2) {
+            // FIXME Решить вопрос с высотой блока
+            height: 447px;
+            margin-top: 30px;
+            padding-left: 19px;
+            box-sizing: border-box;
+            border-left: 2px solid defaultVars.$originalThemeEighthColor;
+        }
+    }
+
+    .composite-component-form-field-CheckBoxField,
+    .composite-component-button-composite-TwoButtonField,
+    .composite-component-button-composite-TwoButtonFieldWithState,
+    .composite-component-form-field-InputDifferentTextField {
+        margin-top: 20px;
+    }
+
+    .composite-component-form-field-CheckBoxField:nth-child(1),
+    .composite-component-button-composite-TwoButtonField:nth-child(1),
+    .composite-component-button-composite-TwoButtonFieldWithState:nth-child(1) {
+        margin-top: 0;
+    }
+}
+
+.page-create-lot-sale-control-block {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}

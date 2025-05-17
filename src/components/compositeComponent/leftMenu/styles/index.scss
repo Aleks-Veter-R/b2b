@@ -1,0 +1,58 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.composite-component-left-menu {
+    display: flex;
+    flex-direction: column;
+
+    .composite-component-left-menu-root-item {
+        & > div:nth-child(1) {
+            a {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .composite-component-left-menu-chidren-list {
+        margin-left: 25px;
+    }
+
+    .composite-component-left-menu-wrapper-item {
+        height: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+    }
+
+    .composite-component-left-menu-parent {
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .composite-component-left-menu-parent.composite-component-left-menu-parent-open {
+        height: auto;
+    }
+
+    a {
+        display: inline-block;
+        height: 24px;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 24px;
+        color: defaultVars.$originalThemeThirdColor;
+    }
+
+    a:hover { opacity: 0.5; }
+
+    .composite-component-left-menu-current-item {
+        a {
+            color: defaultVars.$originalThemeFourthColor;
+        }
+
+        div {
+            transform: rotate(-90deg);
+        }
+    }
+}

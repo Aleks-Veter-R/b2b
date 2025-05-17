@@ -1,23 +1,15 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
-
-import Root from './components/Root';
-import { Main } from './components/Main';
-
+import { StrictMode } from 'react';
+import { BrowserRouter } from 'react-router';
+import AppRoutes from './routes/routes';
 import './styles/App.scss';
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Root />}>
-                    <Route index element={<Main />} />
-                    {/* <Route
-                        path='first-page'
-                        element={<First />}
-                    /> */}
-                </Route>
-            </Routes>
-        </BrowserRouter>
+        <StrictMode>
+            <BrowserRouter>
+                <AppRoutes />  
+            </BrowserRouter>
+        </StrictMode>
     );
 }
 

@@ -1,11 +1,15 @@
+import BasicThreeColumnLayout from '../BasicThreeColumnLayout';
+
 const FirstPage = () => {
     return (
-        <div>
-            <h1>App - First page</h1>
+        <BasicThreeColumnLayout>
             <div>
-                Content first page...
+                <h1>App - First page</h1>
+                <div>
+                    Content first page...
+                </div>
             </div>
-        </div>
+        </BasicThreeColumnLayout>
     );
 }
 

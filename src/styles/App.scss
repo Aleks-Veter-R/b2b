@@ -2,8 +2,81 @@
 @use './FontsStyles.scss';
 @use './ResetStyles.scss';
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
-    background-color: defaultVars.$coralThemThirdColor;
+    width: 100%;
+    height: 100%;
+    background-color: defaultVars.$originalThemeSecondColor;
+
+    #root {
+        height: 100%;
+
+        .root-parent {
+            height: 100%;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+
+            .root-header {
+                height: 82px;
+                overflow: hidden;
+                flex: none;
+            }
+
+            .root-footer {
+                height: 131px;
+                flex: none;
+                background-color: defaultVars.$originalThemeFirstColor;
+            }
+
+            .root-body {
+                flex: 1;
+                display: flex;
+                margin-left: 25px;
+
+                .root-body-left-sidebar,
+                .root-body-right-sidebar {
+                    flex: none;
+                    width: 313px;
+                    box-sizing: border-box;
+                    padding: 24px;
+                }
+
+                // FIXME Удалить свойство
+                .root-body-left-sidebar {
+                    display: none;
+                }
+
+                .root-body-main-content {
+                    width: 1294px;
+                    box-sizing: border-box;
+                    // flex: 1;
+                    padding: 65px 30px 30px;
+                }
+
+                // TODO Перенести в отдельный компонент-композит
+                .composite-component-icon-title {
+                    display: flex;
+                    align-items: center;
+
+                    & > div:nth-child(1) {
+                        margin-right: 9px;
+                    }
+                }
+
+                .divider-wrapper-left-sidebar-header {
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
 }
 
 h1 {

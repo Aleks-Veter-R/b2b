@@ -12,9 +12,8 @@ const BasicThreeColumnLayout = (props: PropsWithChildren) => {
 
     useEffect(() => {
         getTest('http://localhost:9090/test-rest');
+        console.log(location);
     }, []);
-
-    console.log(location); // b*$W48&bdK@17
 
     return (
         <div className='root-parent'>

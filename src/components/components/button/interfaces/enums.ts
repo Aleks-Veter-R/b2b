@@ -3,6 +3,7 @@ const enum EButtonType {
     ActionButtonGray = 'ActionButtonGray',
     IconButton = 'IconButton',
     LinkButton = 'LinkButton',
+    YellowButton = 'YellowButton',
     Default = 'Default',
 };
 

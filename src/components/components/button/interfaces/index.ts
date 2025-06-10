@@ -32,6 +32,11 @@ interface IPropsButtonLinkButton extends IPropsButton {
     type: EButtonType.LinkButton;
 }
 
+interface IPropsButtonYellowButton extends IPropsButton {
+    className: string;
+    type: EButtonType.YellowButton;
+}
+
 interface IPropsButtonDefault extends IPropsButton {
     className: string;
     type: EButtonType.Default;
@@ -45,5 +50,6 @@ export {
     IPropsButtonActionButtonGray,
     IPropsButtonIconButton,
     IPropsButtonLinkButton,
+    IPropsButtonYellowButton,
     IPropsButtonDefault,
 };

@@ -4,6 +4,7 @@ import ButtonActionButton from './components/ButtonActionButton'
 import ButtonActionButtonGray from './components/ButtonActionButtonGray';
 import ButtonIconButton from './components/ButtonIconButton';
 import ButtonLinkButton from './components/ButtonLinkButton';
+import ButtonYellowButton from './components/ButtonYellowButton';
 import ButtonDefault from './components/ButtonDefault';
 import './styles/index.scss';
 
@@ -65,6 +66,16 @@ const Button: FunctionComponent<IPropsButton> = (props) => {
                 <ButtonLinkButton
                     {...attributesLinkButton}
                     type={EButtonType.LinkButton}
+                    className={styleName}
+                    title={props.title}
+                    onClick={props.onClick}
+                />
+            );
+        case EButtonType.YellowButton:
+            return (
+                <ButtonYellowButton
+                    {...props}
+                    type={EButtonType.YellowButton}
                     className={styleName}
                     title={props.title}
                     onClick={props.onClick}

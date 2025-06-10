@@ -1,7 +1,13 @@
 const enum EButtonType {
     ActionButton = 'ActionButton',
     ActionButtonGray = 'ActionButtonGray',
+    IconButton = 'IconButton',
+    LinkButton = 'LinkButton',
     Default = 'Default',
 };
 
-export { EButtonType };
+const enum EButtonIconSizeType {
+    Square20 = 'Square20',
+}
+
+export { EButtonType, EButtonIconSizeType };

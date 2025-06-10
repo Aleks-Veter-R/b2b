@@ -11,6 +11,7 @@ const Text: FunctionComponent<IPropsText> = (props) => {
 
     switch (props.type) {
         case ETextType.Medium:
+        case ETextType.Large:
             return (
                 <div className={styleName}>
                     {props.text}

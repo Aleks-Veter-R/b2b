@@ -1,5 +1,14 @@
 @use '../../../../styles/DefaultVars.scss' as defaultVars;
 
+.component-title-HeaderH0 {
+    font-size: 40px;
+    line-height: 49px;
+    font-weight: 600;
+    color: defaultVars.$originalThemeThirdColor;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .component-title-HeaderH1 {
     font-size: 28px;
     line-height: 35px;

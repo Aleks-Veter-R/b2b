@@ -5,6 +5,12 @@ const enum EIconType {
     ControlPanel = 'ControlPanel',
     DefaultPhoto = 'DefaultPhoto',
     Logo = 'Logo',
+    Search = 'Search',
+    YellowTube = 'YellowTube',
+    YellowMail = 'YellowMail',
+    YellowDoc = 'YellowDoc',
+    YellowAddress = 'YellowAddress',
+    YellowProfile = 'YellowProfile',
     Default = 'Default',
 };
 

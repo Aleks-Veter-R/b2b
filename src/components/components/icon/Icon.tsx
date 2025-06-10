@@ -1,11 +1,17 @@
 import { FunctionComponent, ReactElement } from 'react';
 import { EIconType, IPropsIcon } from './interfaces';
-import Arrow from '../icon/images/Arrow';
-import ArrowSmall from '../icon/images/ArrowSmall';
+import Arrow from './images/Arrow';
+import ArrowSmall from './images/ArrowSmall';
 import Check from './images/Check';
-import ControlPanel from '../icon/images/ControlPanel';
+import ControlPanel from './images/ControlPanel';
 import DefaultPhoto from './images/DefaultPhoto';
-import Logo from '../icon/images/Logo';
+import Logo from './images/Logo';
+import Search from './images/Search';
+import YellowAddress from './images/YellowAddress';
+import YellowDoc from './images/YellowDoc';
+import YellowMail from './images/YellowMail';
+import YellowProfile from './images/YellowProfile';
+import YellowTube from './images/YellowTube';
 import './styles/index.scss';
 
 const componentStyleName = 'component-icon-svg';
@@ -31,6 +37,24 @@ const Icon: FunctionComponent<IPropsIcon> = (props) => {
             break;
         case EIconType.Logo:
             icon = <Logo />;
+            break;
+        case EIconType.Search:
+            icon = <Search />;
+            break;
+        case EIconType.YellowAddress:
+            icon = <YellowAddress />;
+            break;
+        case EIconType.YellowDoc:
+            icon = <YellowDoc />;
+            break;
+        case EIconType.YellowMail:
+            icon = <YellowMail />;
+            break;
+        case EIconType.YellowProfile:
+            icon = <YellowProfile />;
+            break;
+        case EIconType.YellowTube:
+            icon = <YellowTube />;
             break;
         case 'Default':
         default:

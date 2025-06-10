@@ -1,9 +1,14 @@
-import { EButtonType } from './enums';
+import { EButtonType, EButtonIconSizeType } from './enums';
+import { EIconType } from '../../icon';
+import { ETextType } from '../../text';
 
 interface IPropsButton {
     type: EButtonType;
     title: string;
     isInactive?: boolean;
+    iconType?: EIconType;
+    iconSize?: EButtonIconSizeType;
+    linkTextType?: ETextType;
     onClick: () => void;
 }
 
@@ -17,6 +22,16 @@ interface IPropsButtonActionButtonGray extends IPropsButton {
     type: EButtonType.ActionButtonGray;
 }
 
+interface IPropsButtonIconButton extends IPropsButton {
+    className: string;
+    type: EButtonType.IconButton;
+}
+
+interface IPropsButtonLinkButton extends IPropsButton {
+    className: string;
+    type: EButtonType.LinkButton;
+}
+
 interface IPropsButtonDefault extends IPropsButton {
     className: string;
     type: EButtonType.Default;
@@ -24,8 +39,11 @@ interface IPropsButtonDefault extends IPropsButton {
 
 export {
     EButtonType,
+    EButtonIconSizeType,
     IPropsButton,
     IPropsButtonActionButton,
     IPropsButtonActionButtonGray,
+    IPropsButtonIconButton,
+    IPropsButtonLinkButton,
     IPropsButtonDefault,
 };

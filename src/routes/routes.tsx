@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router';
 import { Main } from '../components/Main';
+import { Companies } from '../components/Companies';
 import { First } from '../components/First';
 import { CreateLot } from '../components/pages/controlPanel/sales/createLot/CreateLot';
 
@@ -8,6 +9,10 @@ const AppRoutes = () => {
         {
             path: '/',
             element: <Main />,
+        },
+        {
+            path: '/companies-page',
+            element: <Companies />,
         },
         {
             path: '/first',

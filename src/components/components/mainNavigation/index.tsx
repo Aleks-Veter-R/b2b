@@ -19,8 +19,8 @@ const MainNavigation: FunctionComponent = () => {
                     <NavLink to='/first-page'>
                         Товары
                     </NavLink>
-                    <NavLink to='/first-page'>
-                        Компания
+                    <NavLink to='/companies-page'>
+                        Компании
                     </NavLink>
                 </div>
                 <div className={`${componentStyleName}-profile`}>

@@ -7,10 +7,14 @@ const InputDifferentText: FunctionComponent<IPropsInputDifferentText> = (props) 
         props.onChange(event.target.value)
     }
 
-    let attributes: Omit<IPropsInputDifferentText, 'className' | 'type' | 'onChange' | 'checked'> = {};
+    let attributes: Omit<
+        IPropsInputDifferentText,
+        'className' | 'type' | 'onChange' | 'checked' | 'imageSizeMb' | 'imageType'
+    > = {};
 
     if (props.name !== undefined) attributes.name = props.name;
     if (props.value !== undefined) attributes.value = props.value;
+    if (props.placeholder !== undefined) attributes.placeholder = props.placeholder;
 
     return (
         <input

@@ -29,6 +29,7 @@ const Input: FunctionComponent<IPropsInput<TInputValue>> = (props) => {
 
             if (props.name !== undefined) attributesInputDifferentText.name = props.name;
             if (props.value !== undefined) attributesInputDifferentText.value = props.value as string;
+            if (props.placeholder !== undefined) attributesInputDifferentText.placeholder = props.placeholder;
 
             return (
                 <InputDifferentText
@@ -63,6 +64,7 @@ const Input: FunctionComponent<IPropsInput<TInputValue>> = (props) => {
 
             if (props.name !== undefined) attributesInputText.name = props.name;
             if (props.value !== undefined) attributesInputText.value = props.value as string;
+            if (props.placeholder !== undefined) attributesInputText.placeholder = props.placeholder;
 
             return (
                 <InputText

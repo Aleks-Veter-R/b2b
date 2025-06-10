@@ -10,6 +10,7 @@ interface IPropsInput<T> {
     checked?: boolean;
     imageType?: TImageType[];
     imageSizeMb?: number;
+    placeholder?: string;
     onChange: (value: T) => void;
 }
 

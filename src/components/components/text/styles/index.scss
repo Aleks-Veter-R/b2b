@@ -11,3 +11,11 @@
 .component-text-Medium.isDisabled {
     color: defaultVars.$originalThemeEighthColor;
 }
+
+.component-text-Large {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: defaultVars.$originalThemeThirdColor;
+    text-align: left;
+}

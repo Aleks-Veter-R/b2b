@@ -1,4 +1,5 @@
 const enum ETitleType {
+    HeaderH0 = 'HeaderH0',
     HeaderH1 = 'HeaderH1',
     HeaderH2 = 'HeaderH2',
     HeaderH3 = 'HeaderH3',

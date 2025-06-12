@@ -1,0 +1,177 @@
+.page-account {
+    width: 1282px;
+}
+
+.page-account-wrapper {
+    padding: 25px 25px 30px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background: #fff;
+
+    .page-account-company-name {
+        margin-bottom: 27px;
+    }
+
+    .page-account-account-navigate {
+        margin-bottom: 30px;
+
+        > button {
+            margin-left: 30px;
+        }
+
+        > button:nth-child(1) {
+            margin-left: 0;
+        }
+    }
+
+    .page-account-account-chapter {
+        .input-info-field,
+        .input-checkbox-field > div,
+        .control-field {
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-info-field {
+            > div:nth-child(1) {
+                width: 511px;
+                margin-right: 30px;
+
+                input {
+                    padding: 6px 9px;
+                    border-color: #000;
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+        }
+
+        .input-checkbox-field {
+            > div {
+                input {
+                    margin-right: 30px;
+                }
+            }
+        }
+
+        .control-field {
+            button {
+                margin-right: 30px;
+                text-transform: none;
+            }
+        }
+
+        .document-field {
+            margin-top: 25px;
+            width: 612px;
+
+            .document-field-doc-navigate {
+                display: flex;
+                justify-content: space-between;
+
+                .document-field-prev-link,
+                .document-field-next-link {
+                    flex: none;
+                    width: 100px;
+                }
+
+                .document-field-prev-link {
+                    display: flex;
+                    justify-content: flex-start;
+                }
+
+                .document-field-next-link {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                .document-field-page-count {
+                    text-align: center;
+                }
+            }
+
+            .document-field-pdf {
+                width: 592px;
+                height: 750px;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .chapter-Offer .control-field {
+        margin-top: 0;
+    }
+
+    .change-pass {
+        > div:nth-child(1) {
+            margin-bottom: 57px;
+            color: #EFD90F;
+            text-align: center;
+            text-transform: none;
+        }
+
+        > div:last-child {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                width: 235px;
+                text-transform: none;
+            }
+        }
+
+        input {
+            margin-bottom: 30px;
+            border-color: #000;
+            padding: 6px 9px;
+            font-size: 12px;
+            line-height: 15px;
+            background: #fff;
+        }
+
+        div.change-pass-pending {
+            height: 209px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            > div {
+                color: #EFD90F;
+            }
+        }
+
+        .change-pass-success {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -24px;
+
+            > div:nth-child(1) {
+                margin-bottom: 48px;
+            }
+
+            > div:nth-child(2) {
+                margin-bottom: 31px;
+                color: #EFD90F;
+            }
+        }
+
+        .change-pass-error {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -24px;
+
+            > div:nth-child(1) {
+                margin-bottom: 48px;
+            }
+
+            > div:nth-child(2) {
+                margin-bottom: 31px;
+                color: #EFD90F;
+            }
+        }
+    }
+}

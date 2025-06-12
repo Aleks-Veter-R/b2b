@@ -1,0 +1,28 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.component-modal-BlackModal {
+    background: rgba(0, 0, 0, 0.12);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+
+    .modal-body {
+        margin-top: -17%;
+        width: 589px;
+        height: 373px;
+        box-sizing: border-box;
+        background: #000;
+        padding: 39px;
+        border-radius: 15px;
+    }
+}
+
+.component-modal-BlackModal.active {
+    transform: scale(1);
+}

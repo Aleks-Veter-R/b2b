@@ -1,5 +1,13 @@
 @use '../../../../styles/DefaultVars.scss' as defaultVars;
 
+.component-text-Small {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    color: defaultVars.$originalThemeThirdColor;
+    text-align: left;
+}
+
 .component-text-Medium {
     font-size: 14px;
     line-height: 17px;

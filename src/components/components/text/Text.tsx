@@ -10,6 +10,7 @@ const Text: FunctionComponent<IPropsText> = (props) => {
     if (props.isDisabled) styleName += ' isDisabled';
 
     switch (props.type) {
+        case ETextType.Small:
         case ETextType.Medium:
         case ETextType.Large:
             return (

@@ -11,6 +11,7 @@ import YellowAddress from './images/YellowAddress';
 import YellowDoc from './images/YellowDoc';
 import YellowMail from './images/YellowMail';
 import YellowProfile from './images/YellowProfile';
+import Ok from './images/Ok';
 import YellowTube from './images/YellowTube';
 import './styles/index.scss';
 
@@ -55,6 +56,9 @@ const Icon: FunctionComponent<IPropsIcon> = (props) => {
             break;
         case EIconType.YellowTube:
             icon = <YellowTube />;
+            break;
+        case EIconType.Ok:
+            icon = <Ok />;
             break;
         case 'Default':
         default:

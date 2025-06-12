@@ -11,6 +11,7 @@ const enum EIconType {
     YellowDoc = 'YellowDoc',
     YellowAddress = 'YellowAddress',
     YellowProfile = 'YellowProfile',
+    Ok = 'Ok',
     Default = 'Default',
 };
 

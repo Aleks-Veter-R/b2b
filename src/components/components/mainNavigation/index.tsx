@@ -24,7 +24,7 @@ const MainNavigation: FunctionComponent = () => {
                     </NavLink>
                 </div>
                 <div className={`${componentStyleName}-profile`}>
-                    <NavLink to='/first-page'>
+                    <NavLink to='/account-page'>
                         Магнитогорский металлургический комбинат
                     </NavLink>
                     <NavLink to='/first-page'>

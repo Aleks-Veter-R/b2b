@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router';
 import { Main } from '../components/Main';
 import { Companies } from '../components/Companies';
-import { First } from '../components/First';
+import { Account } from '../components/Account';
+// import { First } from '../components/First';
 import { CreateLot } from '../components/pages/controlPanel/sales/createLot/CreateLot';
 
 const AppRoutes = () => {
@@ -15,13 +16,17 @@ const AppRoutes = () => {
             element: <Companies />,
         },
         {
-            path: '/first',
-            element: <First />,
+            path: '/account-page',
+            element: <Account />,
         },
         {
             path: '/controlPanel/sales/createLot',
             element: <CreateLot />,
         },
+        // {
+        //     path: '/first',
+        //     element: <First />,
+        // },
     ];
 
     return (

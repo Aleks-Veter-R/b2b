@@ -1,0 +1,329 @@
+.page-main {
+    > div > div {
+        width: 1276px;
+        margin: 0 auto;
+    }
+
+    .page-main-section-title {
+        height: 881px;
+        background: #0E0F11;
+
+        > div {
+            padding-top: 165px;
+            position: relative;
+
+            .block-header-title {
+                width: 705px;
+
+                span {
+                    font-family: 'Manrope';
+                    font-size: 50px;
+                    font-weight: 700;
+                    line-height: 64px;
+                    color: #fff;
+                }
+
+                span.yellow {
+                    color: #EFD90F;
+                }
+            }
+
+            .block-header-text {
+                width: 549px;
+                margin-top: 49px;
+
+                * {
+                    color: #fff;
+                }
+            }
+
+            .block-header-button {
+                margin-top: 49px;
+
+                button {
+                    height: 72px;
+                    padding: 25px 50px;
+                    text-transform: none;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    border-radius: 15px;
+                    border: none;
+                }
+            }
+
+            .block-companies {
+                display: flex;
+                height: 49px;
+                margin-top: 217px;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .block-image {
+                position: absolute;
+                right: 27px;
+                top: 63px;
+            }
+        }
+    }
+
+    .page-main-section-info {
+        height: 1901px;
+        padding: 91px 0 70px;
+        box-sizing: border-box;
+        background: #F6F6F3;
+
+        .block-buying-and-selling {
+            display: flex;
+            justify-content: space-between;
+
+            > div:nth-child(1) {
+                width: 627px;
+
+                .block-buying-and-selling-title {
+                    font-family: 'Manrope';
+                    font-weight: 700;
+                    font-size: 40px;
+                    line-height: 55px;
+                    margin-bottom: 20px;
+                }
+
+                .block-buying-and-selling-table {
+                    width: 582px;
+                    height: 341px;
+                    margin-top: 41px;
+                    padding: 39px 19px 39px 17px;
+                    box-sizing: border-box;
+                    background: linear-gradient(226.68deg, #EBF05E 0%, rgba(255, 209, 91, 0.66) 100%);
+                    border: 1px solid #979796;
+                    border-radius: 15px;
+
+                    p {
+                        height: 37px;
+                        text-indent: 0;
+                        padding: 0;
+                        margin-top: 19px;
+                        font-size: 28px;
+                        line-height: 37px;
+                        font-family: 'Tilda';
+
+                        span {
+                            display: inline-block;
+                            width: 37px;
+                            height: 37px;
+                            text-align: center;
+                            background: #fff;
+                            border-radius: 50%;
+                            margin-right: 6px;
+                            font-size: 20px;
+                            top: -3px;
+                            position: relative;
+                        }
+                    }
+
+                    > p:nth-child(1) {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            > div:nth-child(2) {
+                width: 520px;
+                height: 549px;
+                background: no-repeat center 28px url('../../../../assets/amico.png');
+            }
+        }
+
+        .block-advantages {
+            margin-top: 120px;
+
+            .block-advantages-title {
+                font-family: 'Manrope';
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 55px;
+                margin-bottom: 66px;
+            }
+
+            .block-advantages-info {
+                width: 620px;
+                height: 290px;
+                padding: 36px 39px;
+                box-sizing: border-box;
+                position: relative;
+                border: 1px solid #979796;
+                border-radius: 15px;
+                background: linear-gradient(249.41deg, #EBEF5E 0%, #FADE8D 100%);
+                box-shadow: 0px 0.11px 1.66px 0px #00000009;
+                box-shadow: 0px 0.27px 3.99px 0px #0000000C;
+                box-shadow: 0px 0.5px 7.51px 0px #0000000F;
+                box-shadow: 0px 0.89px 13.4px 0px #00000012;
+                box-shadow: 0px 1.67px 25.07px 0px #00000016;
+                box-shadow: 0px 4px 60px 0px #0000001F;
+
+                .title {
+                    font-family: 'Manrope';
+                    font-weight: 700;
+                    font-size: 28px;
+                    line-height: 38px;
+                    margin-bottom: 18px;
+                    width: 450px;
+                }
+
+                .text {
+                    font-family: 'Tilda';
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 22px;
+                    width: 340px;
+                }
+
+                .image {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+
+            > div:nth-child(2),
+            > div:nth-child(3),
+            > div:nth-child(4) {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 38px;
+            }
+
+            > div:nth-child(2) {
+                margin-top: 0;
+
+                > .block-advantages-info:nth-child(1) {
+                    .title {
+                        width: 400px;
+                    }
+
+                    .image {
+                        width: 207px;
+                        height: 168px;
+                        background: no-repeat center center url('../../../../assets/money.png');
+                    }
+                }
+
+                > .block-advantages-info:nth-child(2) {
+                    .image {
+                        width: 194px;
+                        height: 144px;
+                        background: no-repeat center center url('../../../../assets/hand.png');
+                    }
+                }
+            }
+
+            > div:nth-child(3) {
+                > .block-advantages-info:nth-child(1) {
+                    .image {
+                        width: 173px;
+                        height: 165px;
+                        background: no-repeat center center url('../../../../assets/speaker.png');
+                    }
+                }
+
+                > .block-advantages-info:nth-child(2) {
+                    .text {
+                        width: 367px;
+                    }
+
+                    .image {
+                        width: 168px;
+                        height: 175px;
+                        background: no-repeat center center url('../../../../assets/checkList.png');
+                    }
+                }
+            }
+
+            > div:nth-child(4) {
+                justify-content: center;
+
+                > .block-advantages-info:nth-child(1) {
+                    
+
+                    .title {
+                        width: 511px;
+                    }
+
+                    .text {
+                        width: 371px;
+
+                        ul {
+                            list-style-type: disc;
+                            padding-left: 23px;
+
+                            * {
+                                font-family: 'Tilda';
+                            }
+                        }
+                    }
+
+                    .image {
+                        width: 144px;
+                        height: 163px;
+                        bottom: 37px;
+                        background: no-repeat center center url('../../../../assets/settingMan.png');
+                    }
+                }
+            } 
+        }
+    }
+
+    .page-main-section-help {
+        height: 500px;
+        background: no-repeat center 41px url('../../../../assets/ellipse.png') #0E0F11;
+
+        > div {
+            width: 1378px;
+            padding-top: 85px;
+
+            .block-help-title {
+                font-family: 'Manrope';
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 55px;
+                color: #fff;
+                text-align: center;
+            }
+
+            .block-help-items {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 53px;
+                
+                > div {
+                    width: 400px;
+                    height: 231px;
+                    padding: 40px 82px 40px 40px;
+                    box-sizing: border-box;
+                    border-radius: 15px;
+                    background: #FFFFFF1A;
+                    backdrop-filter: blur(40px);
+                    box-shadow: -1px 1px 4px 0px #FFFFFF40 inset;
+
+                    .title {
+                        font-family: 'Manrope';
+                        font-weight: 700;
+                        font-size: 28px;
+                        line-height: 38px;
+                        color: #fff;
+                    }
+
+                    .text {
+                        margin-top: 19px;
+                        font-family: 'Tilda';
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 22px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

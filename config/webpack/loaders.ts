@@ -27,8 +27,27 @@ const webpackLoaders = (options: IWebpackBuildOptions): ModuleOptions['rules'] =
         }
     };
 
+    const fontLoader = {
+        test: /\.(ttf|otf|eot|svg|woff|woff2)$/,
+        type: 'asset/resource',
+        exclude: /node_modules/,
+        // use: ['file-loader'],
+
+        // use: [
+        //     {
+        //         loader: 'file-loader',
+        //         options: {
+        //             name: 'font777.[ext]', // Указываем, как сохранить файл
+        //             outputPath: './', // Папка для шрифтов в dist
+        //             publicPath: './', // Путь для CSS, чтобы браузер мог найти шрифты
+        //         },
+        //     },
+        // ],
+    };
+
     return [
         cssLoader,
+        fontLoader,
         babelLoader,
     ];
 }

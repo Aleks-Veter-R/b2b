@@ -1,0 +1,131 @@
+@use '../../../../styles/DefaultVars.scss' as defaultVars;
+
+.component-app-navigation-Landing,
+.component-app-navigation-Default {
+    height: 100%;
+    width: 100%;
+    background-color: defaultVars.$originalThemeFirstColor;
+
+    .component-app-navigation-wrapper {
+        display: flex;
+        height: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        .component-app-navigation-logo {
+            width: 212px;
+            height: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 22px;
+
+            &:hover { opacity: 0.5; }
+        }
+
+        .component-app-navigation-link-list {
+            a {
+                color: defaultVars.$originalThemeSecondColor;
+                margin-left: 30px;
+            }
+
+            a:nth-child(1) {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.component-app-navigation-Default {
+    .component-app-navigation-wrapper {
+        width: 1416px;
+        padding-top: 16px;
+
+        .component-app-navigation-logo {
+            margin-right: 61px;
+        }
+
+        a {
+            text-transform: uppercase;
+        }
+
+        .component-app-navigation-link-list {
+            width: 337px;
+            margin-right: 106px;
+            padding-top: 10px;
+
+            a:nth-child(1) {
+                text-transform: none;
+            }
+        }
+
+        .component-app-navigation-profile {
+            width: 614px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            a { color: defaultVars.$originalThemeFifthColor; }
+
+            a:nth-child(1) {
+                max-width: 523px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            a:nth-child(2) { text-transform: none; }
+        }
+    }
+}
+
+.component-app-navigation-Landing {
+    .component-app-navigation-wrapper {
+        width: 1279px;
+        justify-content: space-between;
+        align-items: center;
+
+        > div:nth-child(1) {
+            display: flex;
+            align-items: center;
+        }
+
+        .component-app-navigation-logo {
+            margin-right: 117px;
+        }
+
+        .component-app-navigation-link-list {
+            width: 603px;
+
+            a {
+                font-family: Tilda;
+            }
+        }
+
+        .component-app-navigation-profile {
+            a {
+                font-family: 'Tilda';
+            }
+
+            a:nth-child(1) {
+                color: #F5F5F5;
+            }
+
+            a:nth-child(2) {
+                display: inline-block;
+                width: 163px;
+                height: 42px;
+                border-radius: 21px;
+                background: #EFD90F;
+                text-align: center;
+                font-size: 18px;
+                line-height: 42px;
+                color: #0E0F11;
+                margin-left: 52px;
+            }
+        }
+    }
+}

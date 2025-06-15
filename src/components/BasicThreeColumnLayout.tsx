@@ -1,11 +1,13 @@
 import { PropsWithChildren, useEffect } from 'react';
 import { getTest } from '../../rests/rests/fetchFns'
 import Divider,  { EDividerType } from './components/divider';
-import MainNavigation from './components/mainNavigation';
+import MainNavigation, { EMainNavigationType } from './components/mainNavigation';
 import Title, { ETitleType } from './components/title';
 import Icon, { EIconType } from './components/icon';
 import LeftMenu from './compositeComponent/leftMenu';
 import { useLocation } from "react-router-dom";
+
+const componentStyleName = 'basic-three-column-layout';
 
 const BasicThreeColumnLayout = (props: PropsWithChildren) => {
     const location = useLocation();
@@ -16,9 +18,11 @@ const BasicThreeColumnLayout = (props: PropsWithChildren) => {
     }, []);
 
     return (
-        <div className='root-parent'>
+        <div className={`root-parent ${componentStyleName}`}>
             <div className='root-header'>
-                <MainNavigation />
+                <MainNavigation
+                    type={EMainNavigationType.Default}
+                />
             </div>
             <div className='root-body'>
                 <div className='root-body-right-sidebar'>

@@ -12,6 +12,14 @@ const enum EIconType {
     YellowAddress = 'YellowAddress',
     YellowProfile = 'YellowProfile',
     Ok = 'Ok',
+    MainImage = 'MainImage',
+    Company1 = 'Company1',
+    Company2 = 'Company2',
+    Company3 = 'Company3',
+    Company4 = 'Company4',
+    Company5 = 'Company5',
+    Company6 = 'Company6',
+    Company7 = 'Company7',
     Default = 'Default',
 };
 

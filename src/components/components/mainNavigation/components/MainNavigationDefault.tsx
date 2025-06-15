@@ -1,13 +1,13 @@
 import { FunctionComponent } from 'react';
+import { IPropsMainNavigationDefault } from '../interfaces';
 import { NavLink } from 'react-router';
-import Icon, { EIconType } from '../icon';
-import './styles.scss';
+import Icon, { EIconType } from '../../icon';
 
 const componentStyleName = 'component-app-navigation';
 
-const MainNavigation: FunctionComponent = () => {
+const MainNavigationDefault: FunctionComponent<IPropsMainNavigationDefault> = (props) => {
     return (
-        <div className={`${componentStyleName}`}>
+        <div className={`${props.className}`}>
             <div className={`${componentStyleName}-wrapper`}>
                 <div className={`${componentStyleName}-logo`}>
                     <Icon type={EIconType.Logo} />
@@ -36,4 +36,4 @@ const MainNavigation: FunctionComponent = () => {
     );
 };
 
-export default MainNavigation;
+export default MainNavigationDefault;

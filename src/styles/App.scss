@@ -23,19 +23,30 @@ body {
             align-items: stretch;
 
             .root-header {
-                height: 82px;
                 overflow: hidden;
                 flex: none;
             }
 
             .root-footer {
-                height: 131px;
                 flex: none;
                 background-color: defaultVars.$originalThemeFirstColor;
             }
 
             .root-body {
                 flex: 1;
+            }
+        }
+
+        .basic-three-column-layout.root-parent {
+            .root-header {
+                height: 82px;
+            }
+
+            .root-footer {
+                height: 131px;
+            }
+
+            .root-body {
                 display: flex;
                 margin-left: 25px;
 
@@ -73,6 +84,16 @@ body {
                     margin-top: 10px;
                     margin-bottom: 15px;
                 }
+            }
+        }
+
+        .landing-layout.root-parent {
+            .root-header {
+                height: 122px;
+            }
+
+            .root-footer {
+                height: 353px;
             }
         }
     }

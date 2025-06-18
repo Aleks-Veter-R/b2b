@@ -44,6 +44,11 @@ body {
 
             .root-footer {
                 height: 131px;
+
+                > div {
+                    // width: 1920px;
+                    margin: 0 auto;
+                }
             }
 
             .root-body {
@@ -94,6 +99,11 @@ body {
 
             .root-footer {
                 height: 353px;
+
+                > div {
+                    width: 1280px;
+                    margin: 0 auto;
+                }
             }
         }
     }

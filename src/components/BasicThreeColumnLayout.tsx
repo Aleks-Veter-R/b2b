@@ -5,6 +5,7 @@ import MainNavigation, { EMainNavigationType } from './components/mainNavigation
 import Title, { ETitleType } from './components/title';
 import Icon, { EIconType } from './components/icon';
 import LeftMenu from './compositeComponent/leftMenu';
+import Footer, { EFooterType } from './components/footer';
 import { useLocation } from "react-router-dom";
 
 const componentStyleName = 'basic-three-column-layout';
@@ -48,7 +49,9 @@ const BasicThreeColumnLayout = (props: PropsWithChildren) => {
                 </div>
             </div>
             <div className='root-footer'>
-                Это футер...
+                <div>
+                    <Footer type={EFooterType.Mini} />
+                </div>    
             </div>
         </div>
     );

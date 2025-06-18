@@ -5,6 +5,7 @@ import MainNavigation, { EMainNavigationType } from './components/mainNavigation
 import Title, { ETitleType } from './components/title';
 import Icon, { EIconType } from './components/icon';
 import LeftMenu from './compositeComponent/leftMenu';
+import Footer, { EFooterType } from './components/footer';
 import { useLocation } from "react-router-dom";
 
 const componentStyleName = 'landing-layout';
@@ -28,7 +29,9 @@ const LandingLayout = (props: PropsWithChildren) => {
                 {props.children}
             </div>
             <div className='root-footer'>
-                Это футер...
+                <div>
+                    <Footer type={EFooterType.Full} />
+                </div>
             </div>
         </div>
     );
